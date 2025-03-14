@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 // eslint-disable-next-line import/order
 import localFont from "next/font/local";
+
+import Navbar from "@/components/navigation/navbar";
+
 import "./globals.css";
 
 const inter = localFont({
@@ -41,6 +44,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
